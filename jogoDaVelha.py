@@ -25,10 +25,13 @@ if forma1 =='X' or forma1 == 'O':
             return False
 
     def validarJogada(jogada):
-        if jogada[0] != 'a' and jogada[0] != 'b' and jogada[0] != 'c':
+        if len(jogada) < 1:
             print('Informe um espaco valido!')
             return False
-        elif int(jogada[1]) > 3:
+        elif jogada[0] != 'a' and jogada[0] != 'b' and jogada[0] != 'c':
+            print('Informe um espaco valido!')
+            return False
+        elif int(jogada[1]) > 3 or int(jogada[1]) < 1:
             print('Informe um espaco valido!')
             return False
         elif len(jogada) > 3:
